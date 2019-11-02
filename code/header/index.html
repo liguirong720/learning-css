@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <title>移动端头部导航</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #f1f4f5;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .header-wrap{
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            background-color: #fff;
+        }
+        .header-main{
+            width: 100%;
+            height: 59px;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-title {
+            flex: 1;
+            text-align: center;
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .header-search {
+            flex: 1;
+            max-width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .search-text {
+            margin-left: 5px;
+            color: #999;
+        }
+        .f14 {
+            font-size: 32px;
+        }
+        .f12{
+            font-size: 24px;
+        }
+        .mt80 {
+            margin-top: 80px;
+        }
+        .mt-2{
+            margin-top: -2px;
+        }
+        .f-12{
+            font-size: 12px;
+        }
+        .orange {
+            color: #ff6700;
+        }
+        .scrollx-wrap{
+            position: relative;
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            margin-top: 160px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .scrollx-wrap::before {
+            content: '';
+            width: 46px;
+            height: 40px;
+            background-color: #f1f1f1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .scrollx-wrap::after{
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-top: 1px solid #333;
+            border-right: 1px solid #333;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        .scrollx-inner-wrap {
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+        }
+        .scrollx{
+            padding: 5px;
+            width: auto;
+            height: 46px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .scrollx-item{
+            padding: 5px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .scrollx-item:last-child{
+            margin-right: 45px;
+        }
+        .active {
+            color: #ff6700;
+            font-weight: 400;
+            border-bottom: 2px solid #ff6700;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrap">
+        <header class="header-main">
+            <div class="header-left">
+                <span class="iconfont iconarrow-lift f14"></span>
+                <span class="mt-2 f-12">返回</span>
+            </div>
+            <div class="header-title">
+                <span>页面标题啦</span>
+            </div>
+            <div class="header-right">
+                <span class="iconfont iconsearch f14"></span>
+            </div>
+        </header>
+    </header>
+
+    <header class="header-wrap mt80">
+        <header class="header-main">
+            <div class="header-left">
+                <span class="iconfont iconxiaomishangcheng f12 orange"></span>
+            </div>
+            <div class="header-search">
+                <span class="iconfont iconsearch f12"></span>
+                <span class="search-text">搜索商品名称</span>
+            </div>
+            <div class="header-right">
+                <span class="iconfont iconuser f12"></span>
+            </div>
+        </header>
+    </header>
+
+    <div class="scrollx-wrap">
+        <div class="scrollx-inner-wrap">
+            <div class="scrollx">
+                <div class="scrollx-item active">推荐</div>
+                <div class="scrollx-item">手机</div>
+                <div class="scrollx-item">智能</div>
+                <div class="scrollx-item">电视</div>
+                <div class="scrollx-item">电视</div>
+                <div class="scrollx-item">笔记本</div>
+                <div class="scrollx-item">家电</div>
+                <div class="scrollx-item">生活周边</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

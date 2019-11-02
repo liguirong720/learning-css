@@ -1,0 +1,37 @@
+{
+  "id": "1488954",
+  "name": "小米商城",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8033798",
+      "name": "小米商城",
+      "font_class": "xiaomishangcheng",
+      "unicode": "eab5",
+      "unicode_decimal": 60085
+    },
+    {
+      "icon_id": "10824999",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "11474211",
+      "name": "arrow-lift",
+      "font_class": "arrow-lift",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    },
+    {
+      "icon_id": "11474382",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e70a",
+      "unicode_decimal": 59146
+    }
+  ]
+}
