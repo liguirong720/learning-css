@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大转盘</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1b1b1b;
+        }
+
+        .box-lottery {
+            position: relative;
+            margin: 0 auto;
+            width: 615px;
+            height: 615px;
+            background: url(./images/bg_lottery.png) center no-repeat;
+        }
+
+        .lottery-wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url(./images/bg_lottery_f.png) center no-repeat;
+        }
+        .wheel {
+            animation: wheel 3s linear;
+        }
+        @keyframes wheel {
+            0% {
+                transform: rotate(0);
+            }
+            20% {
+                transform: rotate(360deg);
+            }
+            50% {
+                transform: rotate(720deg);
+            }
+            100% {
+                transform: rotate(980deg);
+            }
+        }
+        .box-lottery span {
+            position: absolute;
+            box-sizing: border-box;
+            top: 0;
+            left: 32.7%;
+            width: 214px;
+            height: 50%;
+            color: #fff;
+            transform-origin: 50% 100%;
+            text-align: center;
+        }
+        .span1 {
+            transform: rotate(22.5deg);
+        }
+        .span2 {
+            transform: rotate(67.5deg);
+        }
+        .span3 {
+            transform: rotate(112.5deg);
+        }
+        .span4 {
+            transform: rotate(157.5deg);
+        }
+        .span5 {
+            transform: rotate(202.5deg);
+        }
+        .span6 {
+            transform: rotate(247.5deg);
+        }
+        .span7 {
+            transform: rotate(292.5deg);
+        }
+        .span8 {
+            transform: rotate(337.5deg);
+        }
+        .lottery-wrap i {
+            display: block;
+            width: 100%;
+            height: 60px;
+            font-style: normal;
+            font-size: 22px;
+            line-height: 32px;
+            color: #fee1e1;
+            margin: 55px 0 12px;
+        }
+        .lottery-wrap img {
+            max-width: 100%;
+            width: 93px;
+            height: 69px;
+        }
+        .span5 img {
+            width: 71px;
+            height: 71px;
+        }
+        .span8 img {
+            width: 42px;
+            height: 70px;
+        }
+        .lottery-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 161px;
+            height: 161px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            background: url(./images/btn_lottery.png) center no-repeat;
+            z-index: 11;
+        }
+        .lottery-btn i {
+            position: absolute;
+            top: -33px;
+            left: 50%;
+            margin-left: -23px;
+            width: 41px;
+            height: 39px;
+            background: url(./images/icon_point.png) center no-repeat;
+            transform-origin: 50% 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-lottery">
+        <div class="lottery-wrap">
+            <span class="span1">
+                <i>京东卡<br>10元</i>
+                <img src="./images/lottery_01.png" alt="">
+            </span>
+            <span class="span2">
+                    <i>京东卡<br>20元</i>
+                <img src="./images/lottery_02.png" alt="">
+            </span>
+            <span class="span3">
+                <i>京东卡<br>50元</i>
+                <img src="./images/lottery_03.png" alt="">
+            </span>
+            <span class="span4">
+                <i>京东卡<br>100元</i>
+                <img src="./images/lottery_04.png" alt="">
+            </span>
+            <span class="span5">
+                <i>谢谢参与</i>
+                <img src="./images/lottery_05.png" alt="">
+            </span>
+            <span class="span6">
+                <i>京东卡<br>200元</i>
+                <img src="./images/lottery_06.png" alt="">
+            </span>
+            <span class="span7">
+                <i>京东卡<br>500元</i>
+                <img src="./images/lottery_07.png" alt="">
+            </span>
+            <span class="span8">
+                <i>IQOO Pro<br>手机</i>
+                <img src="./images/lottery_08.png" alt="">
+            </span>
+        </div>
+        <div class="lottery-btn" id="wheelBtn">
+            <i></i>
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector("#wheelBtn");
+    var wheel = document.querySelector('.lottery-wrap');
+    console.log(wheel);
+    btn.addEventListener('click', function(){
+        wheel.classList.add('wheel');
+    }, false)
+</script>
+</html>
